@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar/Navbar";
+import { ClerkProvider } from "@clerk/nextjs";
 
 export const metadata: Metadata = {
   title: "Medium",
@@ -14,10 +15,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-[white]">
-        <Navbar />
-        {children}
-      </body>
+      <ClerkProvider>
+        <body className="bg-[white]">
+          <Navbar />
+          {children}
+        </body>
+      </ClerkProvider>
     </html>
   );
 }
