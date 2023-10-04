@@ -20,7 +20,7 @@ function Navbar() {
           <Search className="w-6 h-6 ml-2 text-[#6B6B6B]"/>
           <input
             type="text"
-            placeholder="Search Medium"
+            placeholder="Search MindScribe"
             className="outline-none bg-[#F9F9F9]  rounded-sm placeholder:text-[#6B6B6B]"
           />
         </div>

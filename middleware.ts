@@ -10,15 +10,6 @@ export default authMiddleware({
     if (!auth.userId && !auth.isPublicRoute) {
       return redirectToSignIn({ returnBackUrl: req.url });
     }
-    // redirect them to welcome page
-    if (
-      auth.userId &&
-      !auth.orgId &&
-      req.nextUrl.pathname !== "/welcome"
-    ) {
-      const orgSelection = new URL("/welcome", req.url);
-      return NextResponse.redirect(orgSelection);
-    }
   },
 });
 
