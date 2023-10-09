@@ -23,7 +23,7 @@ def extract_context_and_generate_hashtags(article_text, num_keywords=5):
     top_keywords = [word for word, freq in word_freq.most_common(num_keywords)]
 
     # Generate hashtags from the top keywords
-    hashtags = ['#' + keyword.replace(' ', '') for keyword in top_keywords]
+    hashtags = ['#' + keyword.replace(' ', '') for keyword in top_keywords if keyword]
 
     return hashtags
 
